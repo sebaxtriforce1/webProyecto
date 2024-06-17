@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Definición del tipo de documento y el idioma -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página -->
+    <title>Veterinaria - Inicio</title>
+    <!-- Enlace a la hoja de estilos de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Enlace a tu archivo de estilos personalizado -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Menú de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Contenedor fluido para la barra de navegación -->
+        <div class="container-fluid">
+            <!-- Marca de la barra de navegación -->
+            <a class="navbar-brand" href="#">Prog Web</a>
+            <!-- Botón para dispositivos pequeños -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Elementos del menú -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Elementos del menú a la izquierda -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- Opción de menú activa -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <!-- Otra opción de menú -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Nosotros</a>
+                    </li>
+                    <!-- Enlace para abrir el modal de inicio de sesión -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#loginModal" data-bs-toggle="modal">Iniciar Sesión</a>
+                    </li>
+                    <!-- Enlace para abrir el modal de registro -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#registerModal" data-bs-toggle="modal">Registrarse</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron jumbotron-fluid text-center">
+        <!-- Fondo del jumbotron -->
+        <div class="jumbotron-background">
+            <!-- Contenedor del jumbotron -->
+            <div class="container">
+                <!-- Título y subtítulo del jumbotron -->
+                <h1 class="display-4">Bienvenido a la Veterinaria</h1>
+                <p class="lead">Cuidamos a tus mascotas con amor y profesionalismo.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Inicio de Sesión -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!-- Título del modal -->
+                <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
+                <!-- Botón para cerrar el modal -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Formulario de inicio de sesión -->
+                <form id="loginForm" action="login.php" method="POST">
+                    <!-- Campo de entrada para el email -->
+                    <div class="mb-3">
+                        <label for="loginEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="loginEmail" name="email" required>
+                    </div>
+                    <!-- Campo de entrada para la contraseña -->
+                    <div class="mb-3">
+                        <label for="loginPassword" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="loginPassword" name="password" required>
+                    </div>
+                    <!-- Botón para enviar el formulario -->
+                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Modal de Registro -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- Título del modal -->
+                    <h5 class="modal-title" id="registerModalLabel">Registrarse</h5>
+                    <!-- Botón para cerrar el modal -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Formulario de registro -->
+                    <form id="registroForm" action="php/registro.php" method="POST">
+                        <!-- Campo de entrada para el nombre -->
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" required>
+                        </div>
+                        <!-- Campo de entrada para el email -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <!-- Campo de entrada para la contraseña -->
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                        <!-- Botón para enviar el formulario -->
+                        <button type="submit" class="btn btn-primary">Registrarse</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Texto de derechos de autor -->
+        <p>&copy; 2024 Veterinaria. Todos los derechos reservados.</p>
+        <!-- Enlaces de contacto y términos y condiciones -->
+        <p><a href="contacto.html">Contacto</a> | <a href="terminos.html">Términos y Condiciones</a></p>
+    </footer>
+
+     <!-- Scripts al final del body para acelerar la carga -->
+     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>
